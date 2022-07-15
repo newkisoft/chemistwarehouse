@@ -1,5 +1,12 @@
 # chemistwarehouse
 
+Used technologies:
+
+* .net 6.0
+* postgresql
+* angular
+* ubuntu 13.3.5
+
 Run the docker for postgresql databse using
 
 ```
