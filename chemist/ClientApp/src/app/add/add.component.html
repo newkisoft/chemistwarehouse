@@ -1,0 +1,17 @@
+
+
+<form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="product.name" [(ngModel)]="product.name"/>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" class="form-control" id="price" name="product.price" [(ngModel)]="product.price"/>      
+    </div>
+    
+    <div class="row">
+        <a  [routerLink]="['/']" class="col-2 btn m-2 btn-secondary">cancel</a>
+    <button class="btn col-2 m-2 btn-primary" (click)="Save()">Save</button>
+</div>
+  </form>

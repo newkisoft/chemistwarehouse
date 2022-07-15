@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class ProductService {\n  /**\n   *\n   */\n  constructor(http) {\n    this.http = http;\n  }\n\n  Insert(product) {\n    return this.http.post(\"/api/Product/\", product);\n  }\n\n  Get(start, numberOfItems) {\n    return this.http.get('/api/Product/' + start + '/' + numberOfItems);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

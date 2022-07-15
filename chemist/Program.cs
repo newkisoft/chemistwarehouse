@@ -1,10 +1,25 @@
+using chemist.Data;
+using chemist.Repositories;
+using chemist.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddDbContext<ChemistDbContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddTransient<IDbContext,ChemistDbContext>();
+builder.Services.AddTransient<IProductService,ProductService>();
+builder.Services.AddTransient<IProductRepository,ProductRepository>();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -22,6 +37,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
-app.MapFallbackToFile("index.html");;
+//app.MapFallbackToFile("index.html");;
 
 app.Run();
