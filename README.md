@@ -21,8 +21,18 @@ to run the code go to chemist folder and use
 dotnet run
 ```
 
+
 a test project has been added in chemist.Tests
 
 ```
 dotnet test
+```
+to run the angular tests go to:
+```
+cd /chemist/ClientApp
+```
+
+and run
+```
+ng test
 ```
