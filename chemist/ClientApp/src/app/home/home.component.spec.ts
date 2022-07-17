@@ -21,13 +21,13 @@ describe('HomeComponent', () => { // 2
     expect(home).toBeTruthy();
   });
  
-  it(`should have as title 'angular-component-testing'`, () => {  //5
+  it(`should have products array'`, () => {  //5
     const fixture = TestBed.createComponent(HomeComponent);
     const home = fixture.debugElement.componentInstance;
     expect(home.products.length).toEqual(0);
   });
  
-  it('should render title in a h1 tag', () => { //6
+  it('should render add button', () => { //6
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
